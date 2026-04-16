@@ -21,6 +21,9 @@ public class LoginPage {
         driver.findElement(loginButton).click();
     }
 
+    @Step("Перейти на страницу регистрации")
     public void clickRegister() { driver.findElement(registerLink).click(); }
+
+    @Step("Перейти на страницу восстановления пароля")
     public void clickForgotPassword() { driver.findElement(forgotPasswordLink).click(); }
 }

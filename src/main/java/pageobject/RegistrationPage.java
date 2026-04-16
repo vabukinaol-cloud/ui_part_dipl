@@ -1,4 +1,4 @@
-package ru.stellarburgers.pageobject;
+package pageobject;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -31,6 +31,7 @@ public class RegistrationPage {
         driver.findElement(registerButton).click();
     }
 
+    @Step("Проверить видимость ошибки 'Некорректный пароль'")
     public boolean isPasswordErrorDisplayed() {
         return driver.findElement(passwordError).isDisplayed();
     }

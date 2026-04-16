@@ -84,6 +84,9 @@
                 <version>3.2.5</version>
                 <configuration>
                     <argLine>-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar"</argLine>
+                    <systemPropertyVariables>
+                        <browser>${browser}</browser>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>

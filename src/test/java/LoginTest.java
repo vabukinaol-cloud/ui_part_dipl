@@ -57,8 +57,8 @@ public class LoginTest extends BaseTest {
         mainPage.clickLogin();
         loginPage.clickRegister(); // Переход на страницу регистрации
 
-        ru.stellarburgers.pageobject.RegistrationPage registrationPage = new ru.stellarburgers.pageobject.RegistrationPage(driver);
-        registrationPage.clickLogin(); // Клик по ссылке "Войти" внизу формы
+        RegistrationPage registrationPage = new RegistrationPage(driver);
+        registrationPage.clickLogin();
 
         loginPage.login(user.getEmail(), user.getPassword());
         assertTrue(mainPage.isOrderButtonVisible(), "Вход через форму регистрации не удался");
